@@ -1,0 +1,28 @@
+body{
+    
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font: 1em sans-serif;
+}
+.box1{
+    background-color: rgb(214, 169, 117);
+    display: flex;
+    border: 1px solid black;
+    height:150px;
+    width: px;
+    border-radius: 50px;
+    align-items:center;
+    justify-content:space-evenly;
+    
+}
+.box{
+    background-color: rgb(141, 187, 169);
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    height: 100px;
+    width: 100px;
+    border-radius: 100px;
+    border: 2px solid rgb(116, 83, 83);
+}
