@@ -1,31 +1,36 @@
-var days =document.getElementById('days')
-var hours =document.getElementById('hours')
-var mins =document.getElementById('mins')
-var sec =document.getElementById('sec')
+var bold =document.getElementById('BOLD')
+var underline =document.getElementById('underline')
+var italic=document.getElementById('italic')
+var text =document.getElementById("text")
+var Sans_serif =document.getElementById("dropdown")
+console.log("Sans_serif")
+bold.addEventListener("click",function(){
+    console.log("bold")
+    text.style.fontWeight = 'bold'
+})
+underline.addEventListener("click",function(){
+    console.log("bold")
+    text.style.textDecoration="underline"
+})
+italic.addEventListener("click",function(){
+    console.log("bold")
+    text.style.fontStyle = "italic"
+})
+Sans_serif.addEventListener("click",function(){
+    console.log("bold")
+   text.style.fontFamily="Sans serif"
+})
+bold.addEventListener("click",function(){
+    console.log("bold")
+    text.style.bold
+})
+var fontSelector = document.getElementById('font-selector');
+var selectedFont = document.getElementById('selected-font');
 
-var bakraEid = new Date()
-bakraEid.setDate(18)
-bakraEid.setMonth(5)
-// console.log(Math.floor(bakraEid))
-var currentdate = new Date()
-// console.log(Math.floor(current_date))
-var daysleft = bakraEid.getTime() - currentdate.getTime()
-// console.log(daysleft/1000/60/60/24)
-var interval = setInterval(function(){
-    var current_date = new Date()
-    
-    daysleft = daysleft - 1000
-    day_s = daysleft/1000/60/60/24
-    // hour_s = daysleft/1000/60/60
-    hour_s = 24 -current_date.getHours()
-    // min_s = daysleft/1000/60
-    min_s =60-current_date.getMinutes()
-    // sec_s = daysleft/1000
-    sec_s = 60- current_date.getSeconds()
+fontSelector.addEventListener('change', function() {
+    var selectedOption = fontSelector.options[fontSelector.selectedIndex];
+    var selectedFontFamily = selectedOption.value;
 
-    days.innerText =Math.floor(day_s)
-    hours.innerText =Math.floor(hour_s)
-    mins.innerText =Math.floor(min_s)
-    sec.innerText =Math.floor(sec_s)
-    
-},1000)
+    selectedFont.style.fontFamily = selectedFontFamily;
+    selectedFont.textContent = "Selected Font: " + selectedFontFamily;
+});
